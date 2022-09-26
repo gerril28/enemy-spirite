@@ -8,5 +8,13 @@ let Player: game.LedSprite = null
 Player = game.createSprite(2, 2)
 let Enemy = game.createSprite(randint(0, 4), 2)
 basic.forever(function () {
-	
+    if (Player.isTouching(Enemy)) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . # . .
+            . # . # .
+            . . . . .
+            `)
+    }
 })
